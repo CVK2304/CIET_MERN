@@ -1,0 +1,234 @@
+<html>
+<head>
+    <title>Div Tag</title>
+    <style>
+    	body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 0;
+}
+
+.column {
+    flex: 1;
+    padding: 10px;
+}
+
+.column img {
+    max-width: 100%;
+    height: auto;
+}
+
+.column video {
+    width: 100%;
+}
+
+.form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form h3 {
+    margin-bottom: 10px;
+}
+
+.form input[type="email"],
+.form input[type="password"],
+.form input[type="text"],
+.form select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form input[type="submit"] {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.form input[type="submit"]:hover {
+    background-color: #4cae4c;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+ul, ol {
+    padding-left: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.column p {
+    margin: 0;
+}
+
+.end {
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="row">
+        <!-- Row 1: Two columns -->
+        <div class="column">
+            <img src="C:\Users\chait\OneDrive\Desktop\New folder\Warranty.ico">
+        </div>
+        <div class="column">
+            <p>Data science is an interdisciplinary academic field that uses statistics, scientific computing, scientific methods, processes, scientific visualization, algorithms and systems to extract or extrapolate knowledge and insights from potentially noisy, structured, or unstructured data.</p>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Row 2: Three columns -->
+        <div class="column">
+            <video src="C:\Users\chait\Downloads\1851190-uhd_3840_2160_25fps.mp4" controls></video>
+        </div>
+        <div class="column">
+            <video src="C:\Users\chait\Downloads\3209211-uhd_3840_2160_25fps.mp4" controls></video>
+        </div>
+        <div class="column">
+            <video src="C:\Users\chait\Downloads\3134599-hd_1920_1080_24fps.mp4" controls></video>
+        </div>
+    </div>
+    <div class="row">
+        <!-- Row 3: Four columns -->
+        <div class="column">
+            <div class="form login-form">
+                <h3>Login Page</h3>
+                <form>
+                    Email id: <input type="email" name="mail"><br>
+                    Pwd: <input type="password" name="password"><br>
+                    Captcha: <input type="text" name="captcha"><br>
+                    <input id="button" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+        <div class="column">
+            <div class="form registration-form">
+                <h3>Registration Form</h3>
+                <form>
+                    Full name: <input type="text" name="fname"><br>
+                    Email id: <input type="email" name="mail"><br>
+                    Password: <input type="password" name="password"><br>
+                    Confirm Password: <input type="password" name="confirm_password"><br>
+                    Select Country: 
+                    <select name="Country">
+                        <option>India</option>
+                        <option>USA</option>
+                        <option>U.K</option>
+                        <option>Ireland</option>
+                        <option>None</option>
+                    </select><br>Do you have passport or not:
+                    <input type="radio" name="answer" value="Yes">Yes
+                    <input type="radio" name="answer" value="No">No<br>
+                    <input type="submit" value="Register">
+                </form>
+            </div>
+        </div>
+        <div class="column">
+            <p>Data science is an interdisciplinary academic field that uses statistics, scientific computing, scientific methods, processes, scientific visualization, algorithms and systems to extract or extrapolate knowledge and insights from potentially noisy, structured, or unstructured data.</p>
+        </div>
+        <div class="column">
+            <img src="C:\Users\chait\OneDrive\Desktop\New folder\Warranty.ico">
+        </div>
+    </div>
+    <div class="row">
+        <!-- Row 4: Five columns -->
+        <div class="column">
+            <table>
+                <tr>
+                    <th>Company</th>
+                    <th>Contact</th>
+                    <th>Country</th>
+                </tr>
+                <tr>
+                    <td>Alfreds Futterkiste</td>
+                    <td>Maria Anders</td>
+                    <td>Germany</td>
+                </tr>
+                <tr>
+                    <td>Centro comercial Moctezuma</td>
+                    <td>Francisco Chang</td>
+                    <td>Mexico</td>
+                </tr>
+            </table>
+        </div>
+        <div class="column">
+            <ul>
+                <li>C</li>
+                <li>Python</li>
+                <li>Java</li>
+            </ul>
+        </div>
+        <div class="column">
+            <ol type="i">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Java Script</li>
+            </ol>
+        </div>
+        <div class="column">
+            <div class="column">
+                <ul>
+                    <li>C</li>
+                    <li>Python</li>
+                    <li>Java</li>
+                </ul>
+            </div>
+            <div class="column">
+                <ol type="i">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Java Script</li>
+                </ol>
+            </div>
+        </div>
+        <div class="column">
+            <p>The End!</p>
+        </div>
+    </div>
+    <h4 align="center">&copy; CIET 2024-25</h4>
+</body>
+</html>
