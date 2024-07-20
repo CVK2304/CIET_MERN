@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Leap year</title>
+</head>
+<body style="background-color: orange;">
+	<h3><b>Leap year check</b></h3>
+	<input type="number" id="year" value="" style="width: 10%;">
+	<button onclick="ciet()">Check</button>
+	<p id="res"></p>
+	<script type="text/javascript">
+		function ciet() {
+			var a=document.getElementById("year").value;
+			var res;
+			if((a%4==0 && a%100!=0) ||(a%400==0)){
+				res="It is a leap year";
+			}else{
+				res="It's not a leap year!"
+			}
+			document.getElementById("res").innerHTML=res
+		}
+	</script>
+</body>
+</html>

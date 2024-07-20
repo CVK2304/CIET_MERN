@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Palindrome</title>
+</head>
+<body style="background-color: orange;">
+	<h3><b>Palindrome check</b></h3>
+	<input type="number" id="num" value="" style="width: 10%;">
+	<button onclick="ciet()">Check</button>
+	<p id="res"></p>
+	<script type="text/javascript">
+		function ciet() {
+			var a=document.getElementById("num").value;
+			var res,rev=0,rem=0,temp=a;
+			while(a>0){
+				rem = a%10;
+				rev=rev*10+rem;
+				a=Math.floor(a/10);
+			}
+			if(temp==rev){
+				res="Yah! It's a Palindrome"
+			}else{
+				res="Oh! It's not a Palindrome"
+			}
+			document.getElementById("res").innerHTML=res
+		}
+	</script>
+</body>
+</html>
