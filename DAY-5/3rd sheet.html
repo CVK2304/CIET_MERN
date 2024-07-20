@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<input type="number" id="myage" value="">
+	<button onclick="ciet()">Check Result</button>
+	<script type="text/javascript">
+		function ciet() {
+			var a=document.getElementById("myage").value;
+			if (a>18) {
+				alert("You are eligible to vote");
+			}
+			else{
+				alert("Sorry!you are not eligible to vote");
+			}
+		}
+	</script>
+</body>
+</html>
