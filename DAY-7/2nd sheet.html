@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Luck Check</title>
+</head>
+<body>
+	<input type="number" id="luckno" value="">
+	<button onclick="luckyfunction()">check my partner</button>
+	<script type="text/javascript">
+		function luckyfunction(){
+			var a=Math.floor(Math.random()*(70-1))+1;
+			var b=document.getElementById('luckno').value;
+			b=Number(b);
+			if(a==b){
+				alert("You are Lucky"+a);
+			}else{
+				alert("You are not lucky"+a);
+			}
+		}
+	</script>
+</body>
+</html>
