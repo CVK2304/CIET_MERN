@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Questions Page</title>
+  <style type="text/css">
+    body {
+      background-color: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      width: 80%;
+    }
+    .form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 45%;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .questions input {
+      display: block;
+      margin: 5px 0;
+      width: calc(100% - 12px);
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .timer {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .submit-btn {
+      width: auto;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body onload="startTimer()">
+  <div class="container">
+    <div class="form">
+      <h3>Additional Questions</h3>
+      <div class="questions" id="questions">
+        <p>How old are you?</p>
+        <input type="text" id="age" placeholder="Enter your age">
+        <p>Do you have a passport?</p>
+        <input type="text" id="passport" placeholder="Yes or No">
+        <br>
+        <input id="submitQuestions" type="button" class="submit-btn" value="Submit" onclick="submitQuestions()">
+      </div>
+    </div>
+  </div>
+  <div class="timer" id="timer">01:00</div>
+  <script type="text/javascript">
+    function submitQuestions() {
+      const age = document.getElementById('age').value.trim();
+      const passport = document.getElementById('passport').value.trim().toLowerCase();
+      let answerCount = 0;
+
+      if (age) answerCount++;
+      if (passport === 'yes' || passport === 'no') answerCount++;
+
+      if (answerCount === 2) {
+        alert('Excellent');
+        return window.location.href = 'login form.html';
+      } else if (answerCount === 1) {
+        alert('Good');
+        return window.location.href = 'login form.html';
+      } else {
+        alert('Answer at least one question');
+      }
+    }
+
+    function startTimer() {
+      let timer = document.getElementById('timer');
+      let time = 60;
+      let interval = setInterval(() => {
+        let minutes = Math.floor(time / 60);
+        let seconds = time % 60;
+        timer.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        time--;
+
+        if (time < 0) {
+          clearInterval(interval);
+          alert('Time is up!');
+          window.location.href = 'login form.html'; // Redirect to index.html
+        }
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

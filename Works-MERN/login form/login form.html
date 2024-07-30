@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login Page</title>
+  <style type="text/css">
+    body {
+      background-color: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      position: relative;
+    }
+    .container {
+      display: flex;
+      justify-content: space-evenly;
+      width: 80%;
+    }
+    .form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 45%;
+    }
+    h3 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    form input, form select {
+      display: block;
+      width: calc(100% - 12px);
+      margin: 5px auto;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    form input[type="submit"] {
+      width: auto;
+      cursor: pointer;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      display: block;
+      margin: 20px auto 0;
+      padding: 10px 20px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form">
+      <h3>Login Page</h3>
+      <form id="loginForm">
+        Email id: <input type="email" name="mail" placeholder=" Enter mail_id"><br>
+        Pwd: <input type="password" name="password" placeholder="Enter Pswd"><br>
+        <input id="button" type="submit" value="Login" onclick="navigateToQuestions()">
+        <div class="buttons" style="display: flex;justify-content: center;">
+          <p style="padding-right:40%;"><a href="registration form.html">Register here</a></p>
+          <p><a href="forgot password.html">Forgot Password</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+  <script type="text/javascript">
+    function navigateToQuestions() {
+      window.location.href = 'questions.html';
+    }
+  </script>
+</body>
+</html>
