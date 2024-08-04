@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Questions Page</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style type="text/css">
     body {
       background-color: orange;
@@ -25,19 +26,20 @@
       padding: 20px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 45%;
+      width: auto;
     }
     h3 {
       text-align: center;
       margin-bottom: 20px;
     }
-    .questions input {
-      display: block;
-      margin: 5px 0;
-      width: calc(100% - 12px);
-      padding: 8px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
+    .logout{
+      position: absolute;
+      top: 10px;
+      right: 8px;
+      background: white;
+      padding: 10px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     .timer {
       position: absolute;
@@ -45,57 +47,125 @@
       right: 10px;
       background: white;
       padding: 10px;
+      margin-right: 3%;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .submit-btn {
-      width: auto;
+    .fa-pencil, .fa-trash {
       cursor: pointer;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      display: block;
-      margin: 20px auto 0;
-      padding: 10px 20px;
-      border-radius: 4px;
     }
   </style>
 </head>
 <body onload="startTimer()">
   <div class="container">
     <div class="form">
-      <h3>Additional Questions</h3>
-      <div class="questions" id="questions">
-        <p>How old are you?</p>
-        <input type="text" id="age" placeholder="Enter your age">
-        <p>Do you have a passport?</p>
-        <input type="text" id="passport" placeholder="Yes or No">
-        <br>
-        <input id="submitQuestions" type="button" class="submit-btn" value="Submit" onclick="submitQuestions()">
-      </div>
+      <h3><u><b>Employee Table</b></u></h3>
+      <table border="1">
+        <tr>
+        <th>Employee name</th>
+        <th>Employee age</th>
+        <th>Employee dob</th>
+        <th>Employee mail</th>
+        <th>Employee salary</th>
+        <th>Options</th>
+        </tr>
+        <tr>
+          <td contenteditable="false">Ramu</td>
+          <td contenteditable="false">23</td>
+          <td contenteditable="false">20-08-2000</td>
+          <td contenteditable="false">ramu@gmail.com</td>
+          <td contenteditable="false">400000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Remo</td>
+          <td contenteditable="false">27</td>
+          <td contenteditable="false">20-08-1997</td>
+          <td contenteditable="false">remo@gmail.com</td>
+          <td contenteditable="false">800000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Navya</td>
+          <td contenteditable="false">24</td>
+          <td contenteditable="false">10-05-2001</td>
+          <td contenteditable="false">navya@gmail.com</td>
+          <td contenteditable="false">400000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Saranya</td>
+          <td contenteditable="false">22</td>
+          <td contenteditable="false">20-10-1999</td>
+          <td contenteditable="false">saranya@gmail.com</td>
+          <td contenteditable="false">490000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Oudarya</td>
+          <td contenteditable="false">26</td>
+          <td contenteditable="false">15-10-2000</td>
+          <td contenteditable="false">oudarya@gmail.com</td>
+          <td contenteditable="false">500000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Bhagya</td>
+          <td contenteditable="false">25</td>
+          <td contenteditable="false">20-05-2000</td>
+          <td contenteditable="false">bhagya@gmail.com</td>
+          <td contenteditable="false">550000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Rahul</td>
+          <td contenteditable="false">28</td>
+          <td contenteditable="false">27-08-2000</td>
+          <td contenteditable="false">rahul@gmail.com</td>
+          <td contenteditable="false">450000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Rajesh</td>
+          <td contenteditable="false">30</td>
+          <td contenteditable="false">20-09-1997</td>
+          <td contenteditable="false">rajesh@gmail.com</td>
+          <td contenteditable="false">600000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Jawan</td>
+          <td contenteditable="false">31</td>
+          <td contenteditable="false">20-07-1998</td>
+          <td contenteditable="false">jawan@gmail.com</td>
+          <td contenteditable="false">500000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+        <tr>
+          <td contenteditable="false">Jagadeesh</td>
+          <td contenteditable="false">32</td>
+          <td contenteditable="false">20-08-1999</td>
+          <td contenteditable="false">jagadeesh@gmail.com</td>
+          <td contenteditable="false">700000</td>
+          <td><i class="fa fa-pencil" aria-hidden="true" style="padding-right: 20%;"></i></i>
+          <i class="fa fa-trash" aria-hidden="true"></i></td>
+        </tr>
+      </table>
     </div>
   </div>
   <div class="timer" id="timer">01:00</div>
+  <div class="logout" id="logout"><i class="fa fa-sign-out" aria-hidden="true"></i></div>
+
   <script type="text/javascript">
-    function submitQuestions() {
-      const age = document.getElementById('age').value.trim();
-      const passport = document.getElementById('passport').value.trim().toLowerCase();
-      let answerCount = 0;
-
-      if (age) answerCount++;
-      if (passport === 'yes' || passport === 'no') answerCount++;
-
-      if (answerCount === 2) {
-        alert('Excellent');
-        return window.location.href = 'login form.html';
-      } else if (answerCount === 1) {
-        alert('Good');
-        return window.location.href = 'login form.html';
-      } else {
-        alert('Answer at least one question');
-      }
-    }
-
     function startTimer() {
       let timer = document.getElementById('timer');
       let time = 60;
@@ -108,10 +178,27 @@
         if (time < 0) {
           clearInterval(interval);
           alert('Time is up!');
-          window.location.href = 'login form.html'; // Redirect to index.html
+          window.location.href = 'login form.html';
         }
       }, 1000);
-    }
+    } document.getElementById('logout').addEventListener('click', function() {
+      window.location.href = 'login form.html';
+    });
+    document.querySelectorAll('.fa-pencil').forEach(pencil => {
+      pencil.addEventListener('click', function() {
+        let row = this.closest('tr');
+        let cells = row.querySelectorAll('td[contenteditable]');
+        cells.forEach(cell => cell.contentEditable = cell.isContentEditable ? "false" : "true");
+        this.classList.toggle('editing');
+      });
+    });
+
+    document.querySelectorAll('.fa-trash').forEach(trash => {
+      trash.addEventListener('click', function() {
+        let row = this.closest('tr');
+        row.remove();
+      });
+    });
   </script>
 </body>
 </html>
