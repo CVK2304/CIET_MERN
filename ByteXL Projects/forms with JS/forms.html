@@ -1,0 +1,136 @@
+  <head>
+    <title>Day-2 Exercise</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="form">
+        <h3>Login Page</h3>
+        <form>
+          Email id: <input type="email" name="mail"><br>
+          Pwd: <input type="password" name="password"><br>
+          Captcha: <input type="text" name="captcha"><br>
+          <input id="button" type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="Rform">
+        <h3>Registration Form</h3>
+        <form>
+          Full name: <input type="text" name="fname"><br>
+          Email id: <input type="email" name="mail"><br>
+          Password: <input type="password" name="password"><br>
+          Confirm Password: <input type="password" name="confirm_password"><br>
+          Select Country: 
+          <select name="Country">
+            <option>India</option>
+            <option>USA</option>
+            <option>U.K</option>
+            <option>Ireland</option>
+            <option>None</option>
+          </select><br>Do you have passport or not:
+        <input type="radio" name="answer" value="Yes">Yes
+        <input type="radio" name="answer" value="No">No<br>
+        <input type="submit" value="Register">
+        </form>
+      </div>
+    </div>
+
+    <script>
+  // Validation for Login Form
+  function validateLoginForm(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const email = document.querySelector('input[name="mail"]').value;
+    const password = document.querySelector('input[name="password"]').value;
+    const captcha = document.querySelector('input[name="captcha"]').value;
+
+    if (!email) {
+      alert("Email id is required.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (!password) {
+      alert("Password is required.");
+      return;
+    }
+
+    if (!captcha) {
+      alert("Captcha is required.");
+      return;
+    }
+
+    alert("Login form submitted successfully!");
+  }
+
+  // Validation for Registration Form
+  function validateRegistrationForm(event) {
+    event.preventDefault(); // Prevent form submission
+
+    const fullName = document.querySelector('input[name="fname"]').value;
+    const email = document.querySelector('.Rform input[name="mail"]').value;
+    const password = document.querySelector('.Rform input[name="password"]').value;
+    const confirmPassword = document.querySelector('input[name="confirm_password"]').value;
+    const country = document.querySelector('select[name="Country"]').value;
+    const passport = document.querySelector('input[name="answer"]:checked');
+
+    if (!fullName) {
+      alert("Full name is required.");
+      return;
+    }
+
+    if (!email) {
+      alert("Email id is required.");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    if (!password) {
+      alert("Password is required.");
+      return;
+    }
+
+    if (password.length < 6) {
+      alert("Password must be at least 6 characters long.");
+      return;
+    }
+
+    if (!confirmPassword) {
+      alert("Please confirm your password.");
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match.");
+      return;
+    }
+
+    if (!passport) {
+      alert("Please select whether you have a passport.");
+      return;
+    }
+
+    alert("Registration form submitted successfully!");
+  }
+
+  // Email validation function
+  function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(String(email).toLowerCase());
+  }
+
+  // Event listeners for form submissions
+  document.querySelector('.form form').addEventListener('submit', validateLoginForm);
+  document.querySelector('.Rform form').addEventListener('submit', validateRegistrationForm);
+</script>
+
+  </body>
+</html>
