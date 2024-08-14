@@ -1,0 +1,33 @@
+{
+  "name": "mern-project",
+  "version": "1.0.0",
+  "description": "mern stack related project",
+  "main": "server.js",
+  "scripts": {
+    "test": "crud application",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client"
+  },
+  "keywords": [
+    "client",
+    "server",
+    "json",
+    "express",
+    "mongoose",
+    "body-parser",
+    "cors",
+    "passport",
+    "passport-label",
+    "axios"
+  ],
+  "author": "kameswar",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "axios": "^1.7.4"
+  }
+}
